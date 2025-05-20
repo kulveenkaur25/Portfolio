@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <title>Dementia Detection and Severity Prediction</title>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
-
-
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
     .project-section {
       background: #f9f9f9;
@@ -38,12 +38,30 @@
     }
   </style>
 </head>
-<body>
+<body class="is-preload">
   <div id="wrapper">
+
+    <!-- Header -->
     <header id="header">
-      <a href="../generic.html" class="logo">← Back to Projects</a>
+      <a href="generic.html" class="logo">← Back to Projects</a>
     </header>
 
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">ABOUT</a></li>
+        <li class="active"><a href="generic.html">PROJECTS</a></li>
+        <li><a href="Resume.html">RESUME</a></li>
+        <li><a href="papers.html">PAPERS</a></li>
+        <li><a href="elements.html">CONTACT</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="http://www.linkedin.com/in/kulveenkaur15" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/kulveenkaur25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
     <div id="main">
       <article class="post featured">
         <header class="major">
@@ -68,7 +86,6 @@
       <section class="project-section">
         <h3>Dataset</h3>
         <p>We used the <a href="https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset" target="_blank" class="highlight-link">Kaggle-based MRI dataset</a>, containing 6,400 MRI scans categorized across four dementia severity classes. Data was augmented using DCGAN to balance class representation (400 images per class).</p>
-
       </section>
 
       <section class="project-section">
@@ -95,41 +112,32 @@
       <section class="project-section">
         <h3>Visual Insights</h3>
         <img src="images/download.png" alt="Augmented image" class="image-fit" />
-        
       </section>
+
       <section class="project-section">
-  <h3>Results</h3>
-  <ul>
-    <li><strong>Best Model:</strong> CNN</li>
-    <li><strong>Accuracy:</strong> 87%</li>
-    <li><strong>Precision/Recall/F1 (Macro):</strong> 0.87</li>
-    <li><strong>Validation Accuracy:</strong> 80%</li>
-    <li><strong>Grad-CAM:</strong> Identified key brain regions across all classes</li>
-  </ul>
+        <h3>Results</h3>
+        <ul>
+          <li><strong>Best Model:</strong> CNN</li>
+          <li><strong>Accuracy:</strong> 87%</li>
+          <li><strong>Precision/Recall/F1 (Macro):</strong> 0.87</li>
+          <li><strong>Validation Accuracy:</strong> 80%</li>
+          <li><strong>Grad-CAM:</strong> Identified key brain regions across all classes</li>
+        </ul>
 
- 
-
-  <div class="result-grid">
-    <!-- Card 1: Predictions -->
-    <div class="result-grid-item">
-  <p>Model Predictions</p>
-  <img src="images/result-predicted.png" alt="Prediction Examples" class="large-image" />
-</div>
-
-
-    <!-- Card 2: Both Grad-CAMs stacked -->
-    <div class="result-grid-item">
-      <p>Grad-CAM Activations </p>
-      <h5>Demented image</h5>
-      <img src="images/gradcam.png" alt="Grad-CAM Heatmap 1" style="margin-bottom: 1rem;" />
-      <h5>Non-Demented image</h5>
-      <img src="images/gradcam2.png" alt="Grad-CAM Heatmap 2" />
-      
-    </div>
-  </div>
-</section>
-
-
+        <div class="result-grid">
+          <div class="result-grid-item">
+            <p>Model Predictions</p>
+            <img src="images/result-predicted.png" alt="Prediction Examples" class="large-image" />
+          </div>
+          <div class="result-grid-item">
+            <p>Grad-CAM Activations</p>
+            <h5>Demented image</h5>
+            <img src="images/gradcam.png" alt="Grad-CAM Heatmap 1" style="margin-bottom: 1rem;" />
+            <h5>Non-Demented image</h5>
+            <img src="images/gradcam2.png" alt="Grad-CAM Heatmap 2" />
+          </div>
+        </div>
+      </section>
 
       <section class="project-section">
         <h3>Challenges</h3>
@@ -158,19 +166,15 @@
         </ul>
       </section>
 
-      
-
       <section class="project-section">
-  <h3>Project Links</h3>
-  <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
-    <p><strong>Github Repository:</strong> <a href="https://github.com/yourusername/dementia-project" target="_blank">GitHub</a></p>
-    <p><strong>Final Report:</strong> <a href="https://drive.google.com/file/d/1e6AEnWFHi1dKZBctUg6BqUcD1k3-XBqY/view?usp=drive_link" target="_blank">View PDF</a></p>
-    <p><strong>Poster:</strong> <a href="https://drive.google.com/file/d/1zANHIIK9P6zz3RrOTnGFhQmJshbc4vLU/view?usp=drive_link" target="_blank">View PDF</a></p>
-     <p><strong>Code:</strong> <a href="https://colab.research.google.com/drive/1Fc5RVe3An2VSVLMIR8K-sZE2wcFPpOA3#scrollTo=4taubBrPpEUh" target="_blank">Code</a></p>
-
-  </div>
-</section>
-
+        <h3>Project Links</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+          <p><strong>GitHub Repository:</strong> <a href="https://github.com/yourusername/dementia-project" target="_blank">GitHub</a></p>
+          <p><strong>Final Report:</strong> <a href="https://drive.google.com/file/d/1e6AEnWFHi1dKZBctUg6BqUcD1k3-XBqY/view?usp=drive_link" target="_blank">View PDF</a></p>
+          <p><strong>Poster:</strong> <a href="https://drive.google.com/file/d/1zANHIIK9P6zz3RrOTnGFhQmJshbc4vLU/view?usp=drive_link" target="_blank">View PDF</a></p>
+          <p><strong>Code:</strong> <a href="https://colab.research.google.com/drive/1Fc5RVe3An2VSVLMIR8K-sZE2wcFPpOA3#scrollTo=4taubBrPpEUh" target="_blank">Colab</a></p>
+        </div>
+      </section>
 
       <section class="project-section">
         <h3>Real-World Impact</h3>
@@ -178,10 +182,37 @@
       </section>
     </div>
 
+    <!-- Footer -->
     <footer id="footer">
-      <p>© Kulveen Kaur 2025</p>
+      <section class="split contact">
+        <section class="alt">
+          <h3>Address</h3>
+          <p>Syracuse, New York, USA</p>
+        </section>
+        <section>
+          <h3>Email</h3>
+          <p><a href="mailto:kulveenkaur25@gmail.com">kulveenkaur25@gmail.com</a></p>
+        </section>
+        <section>
+          <h3>Social</h3>
+          <ul class="icons alt">
+            <li><a href="http://www.linkedin.com/in/kulveenkaur15" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="https://github.com/kulveenkaur25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+          </ul>
+        </section>
+      </section>
     </footer>
+
   </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 
   <script>
     function openModal() {
@@ -191,7 +222,5 @@
       document.getElementById("imgModal").style.display = "none";
     }
   </script>
-
-  
 </body>
 </html>
