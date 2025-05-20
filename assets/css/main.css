@@ -5282,20 +5282,39 @@ details[open] summary {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
+  /* Left-align .hero-text (or your About Me text container) */
+  .hero-text,
+  .about-text,
   #about div[style*="flex: 1 1 600px"] {
-    text-align: center !important;
-    padding: 1rem !important;
+    text-align: left !important;
+    padding: 1rem 2rem !important;
   }
 
+  /* Left-align heading inside About section */
   #about div[style*="flex: 1 1 600px"] h2 {
-    text-align: center !important;
+    text-align: left !important;
+    padding: 0 0 0.5rem 0;
   }
 
+  /* Left-align paragraphs inside About section */
   #about div[style*="flex: 1 1 600px"] p {
-    text-align: center !important;
-    padding: 0 1rem;
+    text-align: left !important;
+    padding: 0;
+  }
+
+  /* Optional: Stack image and text vertically on mobile */
+  #about {
+    flex-direction: column !important;
+    align-items: center;
+  }
+
+  #about img {
+    margin-bottom: 1rem;
+    max-width: 90%;
+    height: auto;
   }
 }
+
 
 
