@@ -5275,36 +5275,39 @@ details[open] summary {
   text-align: left;
 }
 
-@media (max-width: 768px) {
-  /* Left-align .hero-text (or your About Me text container) */
-  .hero-text,
-  .about-text,
-  #about div[style*="flex: 1 1 600px"] {
-    text-align: left !important;
-    padding: 1rem 2rem !important;
+
+@media only screen and (max-width: 768px) {
+    /* Force ABOUT ME section text to be left-aligned */
+    #about > div {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      padding: 1rem 1.5rem !important;
+    }
+
+    #about h2 {
+      text-align: left !important;
+      width: 100% !important;
+      padding-left: 0 !important;
+    }
+
+    #about p {
+      text-align: left !important;
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+
+    /* Ensure image takes full width and goes above text */
+    #about img {
+      max-width: 100% !important;
+      height: auto !important;
+      margin: 0 auto 1rem auto !important;
+    }
+
+    /* Adjust text container layout */
+    #about div[style*="flex: 1 1 600px"] {
+      padding: 1rem !important;
+      text-align: left !important;
+    }
   }
 
-  /* Left-align heading inside About section */
-  #about div[style*="flex: 1 1 600px"] h2 {
-    text-align: left !important;
-    padding: 0 0 0.5rem 0;
-  }
-
-  /* Left-align paragraphs inside About section */
-  #about div[style*="flex: 1 1 600px"] p {
-    text-align: left !important;
-    padding: 0;
-  }
-
-  /* Optional: Stack image and text vertically on mobile */
-  #about {
-    flex-direction: column !important;
-    align-items: center;
-  }
-
-  #about img {
-    margin-bottom: 1rem;
-    max-width: 90%;
-    height: auto;
-  }
-}
