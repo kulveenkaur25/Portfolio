@@ -3,8 +3,8 @@
 <head>
   <title>Sentiment Classification of Movie Reviews</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="../assets/css/main.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     .project-section {
       background: #f9f9f9;
@@ -16,26 +16,14 @@
     .project-section h3 {
       margin-top: 0;
     }
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .dashboard-card {
-      text-align: center;
-    }
-    .dashboard-card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    .image-fit {
-      border-radius: 5px;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+    .dashboard-card img,
+    .image-fit,
+    .carousel-slide img {
       max-width: 100%;
       height: auto;
+      border-radius: 10px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     .button-custom {
       display: inline-block;
@@ -49,12 +37,41 @@
     .button-custom:hover {
       background-color: #555;
     }
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-slide {
+      display: none;
+      text-align: center;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    .carousel-btn {
+      background: transparent;
+      border: none;
+      color: #000;
+      font-size: 2rem;
+      font-weight: bold;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    .carousel-btn.prev {
+      left: 0;
+    }
+    .carousel-btn.next {
+      right: 0;
+    }
   </style>
 </head>
-<body>
+<body class="is-preload">
   <div id="wrapper">
     <header id="header">
-      <a href="../generic.html" class="logo">← Back to Projects</a>
+      <a href="generic.html" class="logo">&#8592; Back to Projects</a>
     </header>
 
     <div id="main">
@@ -62,7 +79,6 @@
         <header class="major">
           <h1>Sentiment Classification of Movie Reviews</h1>
           <p>Exploring NLP-driven techniques to classify movie reviews into sentiments using engineered features and machine learning models.</p>
-          
         </header>
         <div style="text-align: center;">
           <img src="images/sentimnetmain.jpg" alt="Sentiment Dashboard" class="image-fit" />
@@ -81,7 +97,6 @@
 
       <section class="project-section">
         <h3>Key Visualizations</h3>
-
         <div class="carousel-container">
           <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
 
@@ -97,14 +112,11 @@
             <p>Highlights the most common words across reviews. 'Movie', 'make', and 'film' are highly recurring terms.</p>
           </div>
 
-          
-
           <div class="carousel-slide">
             <img src="images/sentiment4.png" alt="Word Cloud" />
             <h4>Word Length Distribution</h4>
-<p>This histogram shows the frequency of word lengths in the dataset. Shorter words (2–5 characters) occur most often in movie review phrases.</p>
-
-</div>
+            <p>This histogram shows the frequency of word lengths in the dataset. Shorter words (2–5 characters) occur most often in movie review phrases.</p>
+          </div>
 
           <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
         </div>
@@ -151,10 +163,8 @@
 
     showSlide(currentSlide);
     let autoplayInterval = setInterval(() => {
-  moveSlide(1);
-}, 3000); // Change every 4 seconds (adjust as needed)
-
+      moveSlide(1);
+    }, 3000);
   </script>
-  
 </body>
 </html>
