@@ -5276,13 +5276,6 @@ details[open] summary {
 }
 
 @media (max-width: 768px) {
-  .hero-text {
-    text-align: center;
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
   /* Left-align .hero-text (or your About Me text container) */
   .hero-text,
   .about-text,
@@ -5315,6 +5308,3 @@ details[open] summary {
     height: auto;
   }
 }
-
-
-
