@@ -3,8 +3,8 @@
 <head>
   <title>Job Market Trend Analysis</title>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="../assets/css/main.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/main.css" />
   <style>
     .project-section {
       background: #f9f9f9;
@@ -16,26 +16,14 @@
     .project-section h3 {
       margin-top: 0;
     }
-    .dashboard-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .dashboard-card {
-      text-align: center;
-    }
-    .dashboard-card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-top: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    .image-fit {
-      border-radius: 5px;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
+    .dashboard-card img,
+    .image-fit,
+    .carousel-slide img {
       max-width: 100%;
       height: auto;
+      border-radius: 10px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     .button-custom {
       display: inline-block;
@@ -49,12 +37,41 @@
     .button-custom:hover {
       background-color: #555;
     }
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+    }
+    .carousel-slide {
+      display: none;
+      text-align: center;
+    }
+    .carousel-slide.active {
+      display: block;
+    }
+    .carousel-btn {
+      background-color: #222;
+      border: none;
+      color: white;
+      padding: 0.5rem 1rem;
+      font-size: 1.5rem;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    .carousel-btn.prev {
+      left: 0;
+    }
+    .carousel-btn.next {
+      right: 0;
+    }
   </style>
 </head>
 <body>
   <div id="wrapper">
     <header id="header">
-      <a href="../generic.html" class="logo">← Back to Projects</a>
+      <a href="generic.html" class="logo">&#8592; Back to Projects</a>
     </header>
 
     <div id="main">
@@ -63,13 +80,10 @@
           <h1>Job Market Trend Analysis</h1>
           <p>Tableau dashboards exploring roles, skills, salaries, and employer trends in the U.S. data science job market.</p>
           <div style="text-align: center; margin-top: 1rem;">
-  <a href="https://public.tableau.com/app/profile/kulveen.kaur/viz/IST737_Group2_FinalPackagedWorkbook/OpeningDashboard?publish=yes" 
-     class="button-custom" 
-     target="_blank">
-     🔗 View Live Tableau Dashboard
-  </a>
-</div>
-
+            <a href="https://public.tableau.com/app/profile/kulveen.kaur/viz/IST737_Group2_FinalPackagedWorkbook/OpeningDashboard?publish=yes" class="button-custom" target="_blank">
+              🔗 View Live Tableau Dashboard
+            </a>
+          </div>
         </header>
         <div style="text-align: center;">
           <img src="images/jobtrend.jpeg" alt="Opening Dashboard" class="image-fit" />
@@ -81,76 +95,62 @@
         <p>This Tableau project analyzes job market trends in the data science domain. It offers insights into global and U.S.-based job roles, salaries, and hiring patterns. The goal is to help iSchool students understand key roles, required skills, and top companies to make informed career decisions.</p>
       </section>
 
-          <section class="project-section">
+      <section class="project-section">
         <h3>Dataset</h3>
         <p>We used job listing data collected and curated from online sources. The cleaned dataset was published here: <a href="https://tinyurl.com/projectdatasets" target="_blank">https://tinyurl.com/projectdatasets</a></p>
       </section>
 
+      <section class="project-section">
+        <h3>Interactive Dashboard Carousel</h3>
+        <div class="carousel-container">
+          <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
 
-     
+          <div class="carousel-slide active">
+            <img src="images/jobmain.jpeg" alt="Opening Dashboard" />
+            <h4>Overview Dashboard</h4>
+            <p>This dashboard shows the global dominance of Data Scientist roles, illustrating the growing importance of data science in the modern workforce.</p>
+          </div>
 
-<section class="project-section">
-  <h3>Interactive Dashboard Carousel</h3>
-  <div class="carousel-container">
-    <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
-    
-    
-    <div class="carousel-slide active">
-      <img src="images/jobmain.jpeg" alt="Opening Dashboard" />
-      <h4>Overview Dashboard</h4>
-      <p>This dashboard shows the global dominance of Data Scientist roles, illustrating the growing importance of data science in the modern workforce.</p>
-    </div>
+          <div class="carousel-slide">
+            <img src="images/job1.jpeg" alt="Dashboard 1" />
+            <h4>Dashboard 1: U.S. Job Landscape</h4>
+            <p>The U.S. holds 63% of global data roles. Entry-level salaries start at $10K–$15K. Roles like ML Engineer & Data Analyst are in high demand.</p>
+          </div>
 
-    <div class="carousel-slide">
-      <img src="images/job1.jpeg" alt="Dashboard 1" />
-      <h4>Dashboard 1: U.S. Job Landscape</h4>
-      <p>The U.S. holds 63% of global data roles. Entry-level salaries start at $10K–$15K. Roles like ML Engineer & Data Analyst are in high demand.</p>
-    </div>
+          <div class="carousel-slide">
+            <img src="images/job2.jpeg" alt="Dashboard 2" />
+            <h4>Dashboard 2: Company Size & Salaries</h4>
+            <p>Medium-sized companies dominate hiring (61%). Full-time roles are 99%. ML Engineers earn the highest average salaries.</p>
+          </div>
 
-    <div class="carousel-slide">
-      <img src="images/job2.jpeg" alt="Dashboard 2" />
-      <h4>Dashboard 2: Company Size & Salaries</h4>
-      <p>Medium-sized companies dominate hiring (61%). Full-time roles are 99%. ML Engineers earn the highest average salaries.</p>
-    </div>
+          <div class="carousel-slide">
+            <img src="images/job3.jpeg" alt="Dashboard 3" />
+            <h4>Dashboard 3: Location-Based Analysis</h4>
+            <p>California and Texas are top hiring states. Most salaries center around $100,000, with Data Engineers at the top of the pay scale.</p>
+          </div>
 
-    <div class="carousel-slide">
-      <img src="images/job3.jpeg" alt="Dashboard 3" />
-      <h4>Dashboard 3: Location-Based Analysis</h4>
-      <p>California and Texas are top hiring states. Most salaries center around $100,000, with Data Engineers at the top of the pay scale.</p>
-    </div>
+          <div class="carousel-slide">
+            <img src="images/job4.jpeg" alt="Dashboard 4" />
+            <h4>Dashboard 4: Skills and Employers</h4>
+            <p>Python, SQL, and Machine Learning are the most required skills. Employers like Alphabet and NVIDIA dominate hiring trends.</p>
+          </div>
 
-    <div class="carousel-slide">
-      <img src="images/job4.jpeg" alt="Dashboard 4" />
-      <h4>Dashboard 4: Skills and Employers</h4>
-      <p>Python, SQL, and Machine Learning are the most required skills. Employers like Alphabet and NVIDIA dominate hiring trends.</p>
-    </div>
+          <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+        </div>
+      </section>
 
-    <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
-  </div>
-</section>
-
-
-     
-
-       <section class="project-section">
+      <section class="project-section">
         <h3>Observation & Conclusion</h3>
         <p>Data science remains a high-demand field. Roles such as Data Scientist and ML Engineer are growing rapidly, with salaries exceeding $100K. Skills like Python, SQL, and ML are crucial. Our dashboards provide actionable insights for students to align their learning paths with industry needs.</p>
       </section>
-
-
-      
-
-     
 
       <section class="project-section">
         <h3>Project Links</h3>
         <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
           <p><strong>Live Dashboard:</strong> <a href="https://public.tableau.com/app/profile/kulveen.kaur/viz/IST737_Group2_FinalPackagedWorkbook/OpeningDashboard?publish=yes" target="_blank">View</a></p>
-           <p><strong>Github Repository:</strong> <a href="https://github.com/kulveenkaur25/Job-Market-Trend-Analysis-" target="_blank">GitHub</a></p>
-    <p><strong>Final Report:</strong> <a href="https://drive.google.com/file/d/1QtkV7Cojq53AH2pI9-qesXc69im0PyYp/view?usp=drive_link" target="_blank">View PDF</a></p>
-    
-
-  </div>
+          <p><strong>Github Repository:</strong> <a href="https://github.com/kulveenkaur25/Job-Market-Trend-Analysis-" target="_blank">GitHub</a></p>
+          <p><strong>Final Report:</strong> <a href="https://drive.google.com/file/d/1QtkV7Cojq53AH2pI9-qesXc69im0PyYp/view?usp=drive_link" target="_blank">View PDF</a></p>
+        </div>
       </section>
 
       <section class="project-section">
@@ -163,24 +163,23 @@
       <p>© Kulveen Kaur 2025</p>
     </footer>
   </div>
+
   <script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll('.carousel-slide');
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
 
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === index);
-    });
-  }
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
 
-  function moveSlide(step) {
-    currentSlide = (currentSlide + step + slides.length) % slides.length;
+    function moveSlide(step) {
+      currentSlide = (currentSlide + step + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
     showSlide(currentSlide);
-  }
-
-  // Show first slide initially
-  showSlide(currentSlide);
-</script>
-
+  </script>
 </body>
 </html>
