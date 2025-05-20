@@ -5199,13 +5199,22 @@ details[open] summary {
   transition: all 0.3s ease;
 }
 
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 0 1rem;
+@media (max-width: 600px) {
+  .skill-box {
+    padding: 1rem;
+  }
+
+  .skill-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .skill-header p {
+    font-size: 0.9rem;
+  }
+
+  .skill-list li {
+    font-size: 0.95rem;
+  }
 }
 
 
