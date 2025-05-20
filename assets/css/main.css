@@ -5199,7 +5199,17 @@ details[open] summary {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 600px) {
+/* Custom Skills Grid - Responsive */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+@media screen and (max-width: 480px) {
   .skill-box {
     padding: 1rem;
   }
