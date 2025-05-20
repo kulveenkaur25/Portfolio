@@ -5275,39 +5275,27 @@ details[open] summary {
   text-align: left;
 }
 
-
-@media only screen and (max-width: 768px) {
-    /* Force ABOUT ME section text to be left-aligned */
-    #about > div {
-      flex-direction: column !important;
-      align-items: flex-start !important;
-      padding: 1rem 1.5rem !important;
-    }
-
-    #about h2 {
-      text-align: left !important;
-      width: 100% !important;
-      padding-left: 0 !important;
-    }
-
-    #about p {
-      text-align: left !important;
-      width: 100% !important;
-      padding-left: 0 !important;
-      padding-right: 0 !important;
-    }
-
-    /* Ensure image takes full width and goes above text */
-    #about img {
-      max-width: 100% !important;
-      height: auto !important;
-      margin: 0 auto 1rem auto !important;
-    }
-
-    /* Adjust text container layout */
-    #about div[style*="flex: 1 1 600px"] {
-      padding: 1rem !important;
-      text-align: left !important;
-    }
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: center;
+    padding: 1rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+  #about div[style*="flex: 1 1 600px"] {
+    text-align: center !important;
+    padding: 1rem !important;
+  }
+
+  #about div[style*="flex: 1 1 600px"] h2 {
+    text-align: center !important;
+  }
+
+  #about div[style*="flex: 1 1 600px"] p {
+    text-align: center !important;
+    padding: 0 1rem;
+  }
+}
+
 
