@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>KULVEEN KAUR PORTFOLIO WEBSITE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <style>
+  /* Bounce-In Animation */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9) translateY(30px);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(1.05) translateY(-10px);
+    }
+    100% {
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .fancy-box {
+    animation: bounceIn 0.8s ease forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* Hover Interaction */
+  .fancy-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Staggered entry */
+  .fancy-box:nth-child(1) { animation-delay: 0.2s; }
+  .fancy-box:nth-child(2) { animation-delay: 0.4s; }
+  .fancy-box:nth-child(3) { animation-delay: 0.6s; }
+  .fancy-box:nth-child(4) { animation-delay: 0.8s; }
+</style>
+
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Hero Section -->
+<section id="intro" class="hero-section" style="background: url('images/splash.png') no-repeat center center/cover; padding: 4rem 2rem;">
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: auto;
+    min-height: 80vh;
+  ">
+    
+    <!-- Left: Image -->
+   <!-- Container with image -->
+<div style="flex: 1 1 400px; display: flex; justify-content: center; align-items: center; padding: 1rem; box-shadow: none; border: none; outline: none;">
+  <img src="images/myimage.jpg" alt="Kulveen Kaur" onclick="openModal()" 
+    style="
+      width: 350px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: none;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: float 6s ease-in-out infinite;
+      cursor: pointer;
+      background: none;
+      outline: none;
+    "
+    onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 30px rgba(0,0,0,0.3)'"
+    onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 20px rgba(0,0,0,0.2)'"
+/>
+
+  <!-- Modal -->
+  <div id="imgModal" style="
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    align-items: center;
+    justify-content: center;
+  " onclick="closeModal()">
+    <img src="images/myimage.jpg" style="
+      display: block;
+      margin: auto;
+      max-width: 80%;
+      max-height: 80%;
+      border-radius: 10px;
+      box-shadow: 0 4px 30px rgba(255,255,255,0.3);
+    " />
+  </div>
+
+  <!-- Animation keyframe -->
+  <style>
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+
+  <!-- Modal Script -->
+  <script>
+    function openModal() {
+      document.getElementById("imgModal").style.display = "flex";
+    }
+    function closeModal() {
+      document.getElementById("imgModal").style.display = "none";
+    }
+  </script>
+</div>
+
+
+    <!-- Right: Text (Centered Vertically) -->
+    <div style="
+      flex: 1 1 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem;
+      color: #fff;
+      text-align: center;
+    ">
+      <div>
+        <h1 style="font-size: 3.5rem; margin-bottom: 0.5rem; font-weight: 800;">
+          KULVEEN <span style="color: #fff;">KAUR</span>
+        </h1>
+        <h3 style="color: #c5a3ff; font-weight: 500; font-size: 1.3rem; margin-bottom: 1.5rem;">
+          DATA SCIENCE & ANALYTICS PROFESSIONAL
+        </h3>
+        <p style="font-size: 1rem; line-height: 1.7; max-width: 600px; margin: 0 auto;">
+          I'm a data-driven graduate student passionate about transforming raw data into meaningful insights.
+          With experience at Amazon and Masters in Applied Data Science, I thrive at the intersection of machine learning,
+          data engineering, and business strategy. Actively seeking 2025 full-time roles where I can make impact.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+				<!-- Header -->
+					<header id="header">
+						<a class="logo">MY PORTFOLIO</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">ABOUT</a></li>
+							<li><a href="generic.html">PROJECTS</a></li>
+							<li><a href="Resume.html">RESUME</a></li>
+							<li><a href="papers.html">PAPERS</a></li>
+							<li><a href="elements.html">CONTACT</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="http://www.linkedin.com/in/kulveenkaur15" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://github.com/kulveenkaur25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<!-- About Me Section -->
+<section id="about" style="padding: 4rem 2rem; background: #fdfdfd;">
+  <div style="
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+  ">
+    <!-- Left: Image -->
+    <div style="
+      flex: 1 1 350px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+    ">
+      <img src="images/me.jpg" alt="Kulveen Kaur" style="
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+      " />
+    </div>
+
+    <!-- Right: Text -->
+    <div style="
+      flex: 1 1 600px;
+      padding: 1rem 1rem 1rem 3rem;
+      text-align: left;
+    ">
+      <h2 style="
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #222;
+      ">
+        ABOUT ME
+      </h2>
+      <p style="font-size: 1.1rem; line-height: 1.8; color: #444;">
+        I am passionate about transforming data into actionable insights that support strategic decision-making. With hands-on
+        experience at Amazon, I built scalable data solutions, automated workflows, and developed impactful dashboards that supported
+        compliance and operational efficiency. During my M.S. in Applied Data Science at Syracuse University, I further deepened
+        my skills through academic research and projects involving machine learning, natural language processing, and real-time data
+        engineering. This combination of industry and academic experience has shaped my ability to deliver data-driven results, and
+        I’m excited to bring this mindset to a full-time role in 2025.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+							<!-- Skills Section (Horizontal, No Scroll) -->
+
+
+    
+   <section id="skills-section" style="background-color: #fdfdfd; padding: 4rem 2rem;">
+  <header style="text-align: center;">
+    <h1 style="font-size: 2.5rem; font-weight: bold;">Skills</h1>
+    
+  </header>
+
+  <div class="skills-grid" style="display: grid; grid-template-columns: 1fr 1fr; max-width: 1000px; margin: 3rem auto; gap: 2rem;">
+    <!-- Left Side -->
+    <div>
+      <div class="skill-box">
+  <div class="skill-header" onclick="toggleSkillList('development')">
+    <div class="skill-icon-title">
+      <span class="icon">{ }</span>
+      <div class="text">
+        <h3>Development</h3>
+        <p>Building Blocks</p>
+      </div>
+    </div>
+    <span class="arrow">&#9660;</span>
+  </div>
+  <ul id="development" class="skill-list">
+    <li>Python</li>
+    <li>SQL</li>
+    <li>MS Excel</li>
+    <li>PySpark</li>
+    <li>R</li>
+  </ul>
+</div>
+
+
+      <div class="skill-box">
+  <div class="skill-header" onclick="toggleSkillList('frameworks')">
+    <div class="skill-icon-title">
+      <span class="icon">🖥</span>
+      <div class="text">
+        <h3>Frameworks</h3>
+        <p>Build Smarter</p>
+      </div>
+    </div>
+    <span class="arrow">&#9660;</span>
+  </div>
+  <ul id="frameworks" class="skill-list">
+      <li>NumPy</li>
+    <li>pandas</li>
+    <li>matplotlib</li>
+    <li>scikit-learn</li>
+    <li>Pytorch</li>
+    <li>OpenCV</li>
+    <li>NLTK</li>
+    <li>streamlit</li>
+    <li>seaborn</li>
+  </ul>
+</div>
+
+
+      <div class="skill-box">
+  <div class="skill-header" onclick="toggleSkillList('viz')">
+    <div class="skill-icon-title">
+      <span class="icon">📈</span>
+      <div class="text">
+        <h3>Databases and Viz</h3>
+        <p>Data Canvas</p>
+      </div>
+    </div>
+    <span class="arrow">&#9660;</span>
+  </div>
+  <ul id="viz" class="skill-list">
+    <li>MySQL</li>
+    <li>Tablaeu</li>
+    <li>Power BI</li>
+    <li>Looker</li>
+  </ul>
+</div>
+
+    </div>
+
+    <!-- Right Side -->
+    <div>
+      <div class="skill-box">
+  <div class="skill-header" onclick="toggleSkillList('ml')">
+    <div class="skill-icon-title">
+      <span class="icon">⚛</span>
+      <div class="text">
+        <h3>Machine Learning</h3>
+        <p>Cognitive Creations!</p>
+      </div>
+    </div>
+    <span class="arrow">&#9660;</span>
+  </div>
+  <ul id="ml" class="skill-list">
+   <li>Linear and Logistic Regression</li>
+    <li>Decision Trees</li>
+    <li>Exploratory Data Analysis</li>
+    <li>Natural Language Processing</li>
+    <li>Clustering</li>
+    <li>Recommender Systems</li>
+    <li>Time Series</li>
+  </ul>
+</div>
+
+
+      <div class="skill-box">
+  <div class="skill-header" onclick="toggleSkillList('cloud')">
+    <div class="skill-icon-title">
+      <span class="icon">☁</span>
+      <div class="text">
+        <h3>Cloud and Engineering</h3>
+        <p>Sky Coders</p>
+      </div>
+    </div>
+    <span class="arrow">&#9660;</span>
+  </div>
+  <ul id="cloud" class="skill-list">
+    <li>Apache Airflow</li>
+    <li>Azure Machine Learning Studio</li>
+    <li>AWS S3</li>
+    <li>Docker</li>
+    <li>Kafka</li>
+  </ul>
+</div>
+
+    </div>
+  </div>
+</section>
+
+
+  </div>
+</section>
+
+
+  
+
+
+     
+
+  </div>
+</section>
+
+
+						
+
+						<!-- Footer -->
+							
+					
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>Syracuse, New York, USA</p>
+							</section>
+						
+							<section>
+								<h3>Email</h3>
+								<p><a href="mailto:kulveenkaur25@gmail.com">kulveenkaur25@gmail.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									
+									<li><a href="http://www.linkedin.com/in/kulveenkaur15" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+									<li><a href="https://github.com/kulveenkaur25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+
+     <script>
+  function toggleSkillList(id) {
+    const list = document.getElementById(id);
+    const box = list.closest('.skill-box');
+    const allLists = document.querySelectorAll('.skill-list');
+    const allBoxes = document.querySelectorAll('.skill-box');
+
+    allLists.forEach(l => {
+      if (l.id !== id) l.style.display = 'none';
+    });
+
+    allBoxes.forEach(b => {
+      if (b !== box) b.classList.remove('active');
+    });
+
+    if (list.style.display === 'block') {
+      list.style.display = 'none';
+      box.classList.remove('active');
+    } else {
+      list.style.display = 'block';
+      box.classList.add('active');
+    }
+  }
+</script>
+
+
+
+	</body>
+</html>

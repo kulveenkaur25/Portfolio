@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Me - Kulveen Kaur</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+  .contact-left {
+  background: #fff;
+  padding: 1.2rem 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 100%;
+  max-width: 340px;
+  margin: auto;
+}
+
+.contact-left h3 {
+  font-size: 1rem;
+  margin-bottom: 0.8rem;
+  letter-spacing: 1px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.contact-left i {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #6a1b9a;
+}
+
+.contact-left .label {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0.2rem;
+}
+
+.contact-left .email {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-left a {
+  font-weight: 600;
+  color: #6a1b9a;
+  text-decoration: none;
+  border-bottom: 1px dotted #aaa;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.contact-left a:hover {
+  border-bottom-color: transparent;
+  color: #333;
+}
+
+
+
+
+
+
+.contact-image {
+  max-width: 180px;
+  margin-bottom: 0rem;
+}
+
+
+
+    .form-group {
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 1.1rem 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background: transparent;
+      outline: none;
+    }
+
+    .form-group label {
+      position: absolute;
+      left: 15px;
+      top: 14px;
+      background: #fff;
+      padding: 0 5px;
+      font-size: 0.9rem;
+      color: #888;
+      transition: 0.3s;
+      pointer-events: none;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label,
+    .form-group textarea:focus + label,
+    .form-group textarea:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 12px;
+      color: #000000;
+      font-size: 0.75rem;
+    }
+
+ .contact-form button {
+  background-color: #fff;
+  color: #1f1f1f;
+  border: 2px solid #1f1f1f;
+  padding: 0.6rem 1.6rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  text-align: center;
+  line-height: 1.2; /* Ensures better vertical centering */
+}
+
+.contact-form button:hover {
+  background-color: #1f1f1f;
+  color: white;
+  border-color: #1f1f1f;
+}
+
+.contact-form button:focus {
+  outline: none !important; /* Removes the blue box on click */
+  box-shadow: none !important;
+}
+
+
+
+
+    @media screen and (max-width: 768px) {
+      .contact-wrapper {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+<body class="is-preload animate__animated animate__fadeIn">
+
+  <div id="wrapper">
+
+    <!-- Header -->
+    <header id="header">
+      <a class="logo">CONTACT</a>
+    </header>
+
+    <!-- Nav -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">ABOUT</a></li>
+        <li><a href="generic.html">PROJECTS</a></li>
+        <li><a href="Resume.html">RESUME</a></li>
+        <li><a href="papers.html">PAPERS</a></li>
+        <li class="active"><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="http://www.linkedin.com/in/kulveenkaur15" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+        <li><a href="https://github.com/kulveenkaur25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+      <section class="contact-wrapper">
+
+        <!-- LEFT CARD -->
+        <!-- LEFT CARD -->
+<div style="text-align: center;">
+  <img src="images/cont.png" alt="Decorative" class="contact-image" />
+
+<div class="contact-left">
+  <h3>Get in Touch</h3>
+  <i class="fas fa-envelope"></i>
+  <p class="label">Email</p>
+  <p class="email">kulveenkaur15@gmail.com</p>
+  <a href="mailto:kulveenkaur15@gmail.com">Write →</a>
+</div>
+
+
+</div>
+
+<div class="contact-form">
+  <h3>Type Message here</h3>
+  <form id="contact-form" onsubmit="return sendEmail(event)">
+    <div class="form-group">
+      <input type="text" name="from_name" required placeholder=" " />
+      <label>Name</label>
+    </div>
+    <div class="form-group">
+      <input type="email" name="from_email" required placeholder=" " />
+      <label>Email</label>
+    </div>
+    <div class="form-group">
+      <textarea name="message" rows="5" required placeholder=" "></textarea>
+      <label>Message</label>
+    </div>
+    <button type="submit" id="sendBtn">Send Message</button>
+  </form>
+</div>
+
+
+
+        
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <section>
+        <h3>Social</h3>
+        <ul class="icons alt">
+          <li><a href="http://www.linkedin.com/in/kulveenkaur15" class="icon brands alt fa-linkedin"><span class="label">Linkedin</span></a></li>
+          <li><a href="https://github.com/kulveenkaur25" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+        </ul>
+      </section>
+    </footer>
+
+    
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("jLPRJY5s72tFdSxTv"); // Replace with your actual public key
+  })();
+</script>
+
+
+
+<script>
+  function sendEmail(event) {
+    event.preventDefault();
+    const btn = document.getElementById("sendBtn");
+    btn.innerHTML = "Sending...";
+    btn.disabled = true;
+
+    emailjs.sendForm('service_7ya8uw9', 'template_6bs4ucp', '#contact-form')
+      .then(() => {
+        btn.innerHTML = "✅ Sent!";
+        setTimeout(() => {
+          btn.innerHTML = "Send Message";
+          btn.disabled = false;
+          document.getElementById("contact-form").reset();
+        }, 2500);
+      }, (error) => {
+        console.error('FAILED...', error);
+        btn.innerHTML = "❌ Error!";
+        setTimeout(() => {
+          btn.innerHTML = "Send Message";
+          btn.disabled = false;
+        }, 2500);
+      });
+  }
+</script>
+
+</body>
+</html>

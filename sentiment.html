@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sentiment Classification of Movie Reviews</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .project-section {
+      background: #f9f9f9;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+    .project-section h3 {
+      margin-top: 0;
+    }
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    .dashboard-card {
+      text-align: center;
+    }
+    .dashboard-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .image-fit {
+      border-radius: 5px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      max-width: 100%;
+      height: auto;
+    }
+    .button-custom {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 0.75rem 1.5rem;
+      background-color: #2e2e2e;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    .button-custom:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <a href="../generic.html" class="logo">← Back to Projects</a>
+    </header>
+
+    <div id="main">
+      <article class="post featured">
+        <header class="major">
+          <h1>Sentiment Classification of Movie Reviews</h1>
+          <p>Exploring NLP-driven techniques to classify movie reviews into sentiments using engineered features and machine learning models.</p>
+          
+        </header>
+        <div style="text-align: center;">
+          <img src="images/sentimnetmain.jpg" alt="Sentiment Dashboard" class="image-fit" />
+        </div>
+      </article>
+
+      <section class="project-section">
+        <h3>Project Overview</h3>
+        <p>This project uses natural language processing techniques and classifiers to analyze and predict sentiment in movie reviews. Using various engineered features such as unigrams, bigrams, POS tags, and lexicon-based attributes, it evaluates sentiment across multiple ML models.</p>
+      </section>
+
+      <section class="project-section">
+        <h3>Dataset</h3>
+        <p>The dataset was sourced from a Kaggle competition based on Rotten Tomatoes reviews. It includes annotated sentiment labels from 0 (Negative) to 4 (Positive) and was split into training and testing sets. <a href="https://www.kaggle.com/c/sentiment-analysis-on-movie-reviews" target="_blank">Kaggle Dataset Link</a></p>
+      </section>
+
+      <section class="project-section">
+        <h3>Key Visualizations</h3>
+
+        <div class="carousel-container">
+          <button class="carousel-btn prev" onclick="moveSlide(-1)">❮</button>
+
+          <div class="carousel-slide active">
+            <img src="images/sentiment1.png" alt="Sentiment Histogram" />
+            <h4>Sentiment Distribution</h4>
+            <p>Displays frequency of sentiment labels. Neutral sentiments appear most frequently in the dataset.</p>
+          </div>
+
+          <div class="carousel-slide">
+            <img src="images/sentiment2.png" alt="Word Frequency Histogram" />
+            <h4>Word Frequency</h4>
+            <p>Highlights the most common words across reviews. 'Movie', 'make', and 'film' are highly recurring terms.</p>
+          </div>
+
+          
+
+          <div class="carousel-slide">
+            <img src="images/sentiment4.png" alt="Word Cloud" />
+            <h4>Word Length Distribution</h4>
+<p>This histogram shows the frequency of word lengths in the dataset. Shorter words (2–5 characters) occur most often in movie review phrases.</p>
+
+</div>
+
+          <button class="carousel-btn next" onclick="moveSlide(1)">❯</button>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h3>Observation & Conclusion</h3>
+        <p>Classifiers such as Random Forest and SVM performed best using LIWC and combined SL+LIWC feature sets. Preprocessing impacted results differently across models, showing that unfiltered data sometimes yielded better accuracy. The best result achieved was 56% accuracy.</p>
+      </section>
+
+      <section class="project-section">
+        <h3>Project Links</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+          <p><strong>GitHub Repository:</strong> <a href="https://github.com/kulveenkaur25/Sentiment-Classification-Of-Movie-Reviews" target="_blank">GitHub</a></p>
+          <p><strong>Final Report:</strong> <a href="https://drive.google.com/file/d/1c3wjUePqB3-sCBqfrDIaFWBB2u9EDLuw/view?usp=drive_link" target="_blank">View PDF</a></p>
+        </div>
+      </section>
+
+      <section class="project-section">
+        <h3>Real-World Impact</h3>
+        <p>This work provides insight into effective text classification pipelines using linguistically grounded features. It has applications in movie review analysis, customer sentiment monitoring, and automated feedback systems.</p>
+      </section>
+    </div>
+
+    <footer id="footer">
+      <p>© Kulveen Kaur 2025</p>
+    </footer>
+  </div>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+    }
+
+    function moveSlide(step) {
+      currentSlide = (currentSlide + step + slides.length) % slides.length;
+      showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+    let autoplayInterval = setInterval(() => {
+  moveSlide(1);
+}, 3000); // Change every 4 seconds (adjust as needed)
+
+  </script>
+  
+</body>
+</html>
