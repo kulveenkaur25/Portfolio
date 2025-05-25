@@ -5275,27 +5275,34 @@ details[open] summary {
   text-align: left;
 }
 
+
+
 @media (max-width: 768px) {
-  .hero-text {
-    text-align: center;
-    padding: 1rem;
+  #about > div {
+    flex-direction: column;
+    padding: 2rem 1rem !important;
+  }
+
+  #about > div img {
+    width: 250px !important;
+    height: 250px !important;
+    margin-bottom: 1.5rem;
+  }
+
+  #about > div > div:last-child {
+    padding: 0 1rem !important;
+    text-align: center !important;
+  }
+
+  #about h2 {
+    font-size: 2rem !important;
+  }
+
+  #about p {
+    font-size: 1rem !important;
+    line-height: 1.7;
   }
 }
 
-@media screen and (max-width: 768px) {
-  #about div[style*="flex: 1 1 600px"] {
-    text-align: center !important;
-    padding: 1rem !important;
-  }
-
-  #about div[style*="flex: 1 1 600px"] h2 {
-    text-align: center !important;
-  }
-
-  #about div[style*="flex: 1 1 600px"] p {
-    text-align: center !important;
-    padding: 0 1rem;
-  }
-}
 
 
