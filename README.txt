@@ -1,53 +1,44 @@
-# Kulveen Kaur – Data Science Portfolio Website
+Kulveen Kaur – Portfolio Website
 
-This is a responsive and interactive portfolio website designed to showcase my background in data science, analytics, and research. The site includes sections for my biography, projects, resume, research publications, and contact information.
+A responsive, animated personal portfolio website to showcase my experience in data science, analytics, and research. This site highlights key projects, academic work, resume, and contact details.
 
----
-
-## 🔍 Overview
-
-The portfolio includes:
-
-- **About**: Professional summary and career goals.
-- **Projects**: A collection of academic and industry projects using Python, SQL, machine learning, and data visualization.
-- **Resume**: Downloadable resume/CV for potential employers.
-- **Papers**: Links to published research in explainable AI and data-driven healthcare.
-- **Contact**: Location, email, and social media links.
-
----
-
-## 💡 Features
-
-- Fully responsive layout optimized for desktop and mobile screens
-- Scroll animations and hover interactions
-- Interactive skill cards with toggle functionality
+===========================
+FEATURES
+===========================
+- Mobile-first responsive design
+- Scroll-based animations and interactive UI
+- Toggleable skill sections with icons
 - Modal popup for profile image
-- Clean, modern design using CSS flexbox and media queries
+- Organized layout with navigation bar and section links
 
----
+===========================
+TECHNOLOGIES USED
+===========================
+- HTML5 / CSS3
+- JavaScript (Vanilla)
+- jQuery (for scroll effects and modals)
+- Font Awesome (icons)
+- Google Fonts (Merriweather, Source Sans Pro)
 
-## 🛠 Tech Stack
 
-- **HTML5 / CSS3**
-- **JavaScript**
-- **jQuery** – Scroll animations
-- **Font Awesome** – Icon set
-- **Google Fonts** – Merriweather & Source Sans Pro
+===========================
+LIVE SITE
+===========================
+Visit: https://kulveenkaur25.github.io/Portfolio/
 
----
+===========================
+LICENSE & USAGE
+===========================
+This project is for personal use and academic presentation. All original content (text, projects, resume, images) is © Kulveen Kaur.
+Please do not reproduce without permission.
 
-## 📄 License & Use
+===========================
+CONTACT
+===========================
+Kulveen Kaur
+Syracuse, New York, USA
+Email: kulveenkaur25@gmail.com
+LinkedIn: https://www.linkedin.com/in/kulveenkaur15
+GitHub: https://github.com/kulveenkaur25
+Research: https://scholar.google.com/citations?hl=en&user=-7a73VsAAAAJ&view_op=list_works
 
-All content, including text, images, resume, and project data, is the intellectual property of **Kulveen Kaur**. Reuse or redistribution without permission is prohibited.
-
----
-
-## 📬 Contact
-
-**Kulveen Kaur**  
-📍 Syracuse, New York  
-📧 kulveenkaur25@gmail.com  
-🔗 [LinkedIn](https://www.linkedin.com/in/kulveenkaur15)  
-🔗 [GitHub](https://github.com/kulveenkaur25)
-
----
